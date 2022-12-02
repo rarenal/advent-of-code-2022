@@ -1,5 +1,5 @@
-import { sumArrayValues } from '../array-utils';
-import { readRawInput } from '../file-utils';
+import { sumArrayValues } from '../../array-utils';
+import { readRawInput } from '../../file-utils';
 
 // Common
 export const getInput = () => readRawInput('day1.txt')
