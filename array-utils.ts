@@ -18,6 +18,14 @@ export const flatten = <T>(matrix: T[][]): T[] => {
   return flattened;
 }
 
+export const group = <T>(array: T[], n: number): T[][] => {
+  return array.reduce((arrayGrouped, item, index) =>
+      (index % n
+        ? arrayGrouped[arrayGrouped.length - 1].push(item)
+        : arrayGrouped.push([item])) && arrayGrouped
+    , []);
+}
+
 export const minMax = (array: number[]): [number, number] =>
   [Math.min(...array), Math.max(...array)];
 
